@@ -14,11 +14,15 @@
 <section class="flex">
   <nav class="pr-4">
     <ul class="menu bg-base-100 w-56">
-      <li class="hover:bg-base-100">
+      <li
+        class="hover:bg-base-100"
+        *ngFor="let r of routes"
+      >
         <a
-          routerLink=""
+          [routerLink]="r.path"
           [routerLinkActive]="['active']"
-          >Home</a
+          [routerLinkActiveOptions]="{ exact: true }"
+          >{{ r.text }}</a
         >
       </li>
     </ul>

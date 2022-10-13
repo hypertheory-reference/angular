@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
+import { PlaceHolderComponent } from './components/place-holder/place-holder.component';
 @NgModule({
   imports: [
     RouterModule.forRoot([
@@ -8,6 +8,22 @@ import { RouterModule } from '@angular/router';
         path: '',
         pathMatch: 'full',
         loadChildren: () => import('@ht/home').then((m) => m.HomeModule),
+      },
+      {
+        path: 'forms',
+        component: PlaceHolderComponent,
+      },
+      {
+        path: 'testing',
+        component: PlaceHolderComponent,
+      },
+      {
+        path: 'components',
+        component: PlaceHolderComponent,
+      },
+      {
+        path: 'redux',
+        component: PlaceHolderComponent,
       },
     ]),
   ],
