@@ -1,10 +1,33 @@
+# Hypertheory Training/Labs Angular Reference
 
+A kind of _catch-all_ reference for Angular application development. This is not meant to be a "real" application - more of a _ransom note_, _hodge-podge_ of various patterns, etc.
 
-# Ht
+## Some Guiding Principles
+
+1. Using Libraries / Lazy Loaded Features, Etc.
+2. Keep the Appmodule nice and lean.
+3. Redux / NGRX all the things.
+4. Organically grow a component library (preferring standalone, dumb components)
+5. Testing: Cypress for integration testing (with mocked APIs), and Cypress Component Tests for the UI Library
+6. A _strict_ CI/CD Pipeline that evolves with the application.
+7. Each library will have it's own documentation (maybe just a README for now?) that explains the reason for that libraries existence.
+
+## This Project
+
+### UI
+
+This project uses [TailwindCSS](https://tailwindcss.com), and the [DaisyUI](https://daisyui.com) UI Library.
+
+### Inner-Loop
+
+The _reason_ to use NX, IMO, as well as TypeScript, is to improve the DX by surfacing issues in the inner-loop.
+
+- ESLint
+- Prettier
+
+## Remainder for NX Readme
 
 This project was generated using [Nx](https://nx.dev).
-
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
 
 🔎 **Smart, Fast and Extensible Build System**
 
@@ -21,23 +44,6 @@ This project was generated using [Nx](https://nx.dev).
 Nx supports many plugins which add capabilities for developing different types of applications and different tools.
 
 These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
-
-Below are our core plugins:
-
-- [Angular](https://angular.io)
-  - `ng add @nrwl/angular`
-- [React](https://reactjs.org)
-  - `ng add @nrwl/react`
-- Web (no framework frontends)
-  - `ng add @nrwl/web`
-- [Nest](https://nestjs.com)
-  - `ng add @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `ng add @nrwl/express`
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
-
-There are also many [community plugins](https://nx.dev/community) you could add.
 
 ## Generate an application
 
@@ -86,11 +92,6 @@ Run `nx graph` to see a diagram of the dependencies of your projects.
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
-
-
-
-
-
 
 ## ☁ Nx Cloud
 
