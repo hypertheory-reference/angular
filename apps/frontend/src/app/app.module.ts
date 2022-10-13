@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { SharedModule } from '@ht/shared';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { AppNgrxModule } from './state/app-ngrx.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SharedModule,
     AppNgrxModule,
   ],
   providers: [],
