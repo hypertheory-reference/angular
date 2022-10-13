@@ -1,5 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# A Scratch Folder for Local Testing / Exploration
+/DELETEME
 # compiled output
 /dist
 /tmp
@@ -23,6 +25,7 @@ node_modules
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/typescript.code-snippets
 
 # misc
 /.sass-cache
