@@ -1,3 +1,29 @@
-<main>
-  <router-outlet></router-outlet>
-</main>
+<header class="hero bg-base-100 border-b-2 border-b-black mb-4">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-2xl text-purple font-bold">
+        Hypertheory Angular Reference
+      </h1>
+      <p class="py-6">
+        A Playground for developing, discussing, and documenting good Angular
+        Application Development
+      </p>
+    </div>
+  </div>
+</header>
+<section class="flex">
+  <nav class="pr-4">
+    <ul class="menu bg-base-100 w-56">
+      <li class="hover:bg-base-100">
+        <a
+          routerLink=""
+          [routerLinkActive]="['active']"
+          >Home</a
+        >
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</section>
