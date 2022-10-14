@@ -7,7 +7,9 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared-ui"],
+      "outputs": [
+        "coverage/libs/shared-ui"
+      ],
       "options": {
         "jestConfig": "libs/shared-ui/jest.config.ts",
         "passWithNoTests": true
@@ -20,6 +22,15 @@
           "libs/shared-ui/**/*.ts",
           "libs/shared-ui/**/*.html"
         ]
+      }
+    },
+    "component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/shared-ui/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "frontend:build"
       }
     }
   },
