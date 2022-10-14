@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,4 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./alert-simple.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AlertSimpleComponent {}
+export class AlertSimpleComponent {
+  @Input() message = '';
+  @Input() type: 'default' | 'info' | 'success' | 'error' | 'warning' =
+    'default';
+}

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Route } from '@angular/router';
 import { ComponentsComponent } from './components.component';
 import { MarkdownModule } from 'ngx-markdown';
+import { AlertSimpleComponent } from '@ht/shared-ui';
 
 export const componentsRoutes: Route[] = [
   {
@@ -16,6 +17,7 @@ export const componentsRoutes: Route[] = [
     CommonModule,
     RouterModule.forChild(componentsRoutes),
     MarkdownModule.forChild(),
+    AlertSimpleComponent,
   ],
   declarations: [ComponentsComponent],
 })
