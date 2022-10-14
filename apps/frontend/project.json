@@ -18,8 +18,19 @@
           "apps/frontend/src/favicon.ico",
           "apps/frontend/src/assets"
         ],
-        "styles": ["apps/frontend/src/styles.css"],
-        "scripts": []
+        "styles": [
+          "apps/frontend/src/styles.css",
+          "node_modules/prismjs/themes/prism-okaidia.css",
+          "node_modules/prismjs/plugins/command-line/prism-command-line.css"
+        ],
+        "scripts": [
+          "node_modules/marked/marked.min.js",
+          "node_modules/prismjs/prism.js",
+          "node_modules/prismjs/components/prism-csharp.min.js",
+          "node_modules/prismjs/components/prism-typescript.min.js",
+          "node_modules/prismjs/components/prism-css.min.js",
+          "node_modules/prismjs/plugins/command-line/prism-command-line.js"
+        ]
       },
       "configurations": {
         "production": {
