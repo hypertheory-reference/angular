@@ -19,7 +19,8 @@ import { PlaceHolderComponent } from './components/place-holder/place-holder.com
       },
       {
         path: 'components',
-        component: PlaceHolderComponent,
+        loadChildren: () =>
+          import('@ht/components').then((m) => m.ComponentsModule),
       },
       {
         path: 'redux',
