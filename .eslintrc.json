@@ -40,7 +40,10 @@
         "*.js",
         "*.jsx"
       ],
-      "extends": ["plugin:@nrwl/nx/javascript"],
+      "extends": [
+        "plugin:@nrwl/nx/javascript",
+        "plugin:@ngrx/recommended-requiring-type-checking"
+      ],
       "rules": {}
     },
     {
