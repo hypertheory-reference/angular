@@ -3,11 +3,20 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Route } from '@angular/router';
 import { ComponentsComponent } from './components.component';
 import { MarkdownModule } from 'ngx-markdown';
+import { AlertSimpleComponent } from '@ht/shared-ui';
+import { UiComponentsComponent } from './containers/ui-components/ui-components.component';
+import { AlertsComponent } from './containers/ui-components/components/alerts/alerts.component';
 
 export const componentsRoutes: Route[] = [
   {
     path: '',
     component: ComponentsComponent,
+    children: [
+      {
+        path: 'shared-ui',
+        component: UiComponentsComponent,
+      },
+    ],
   },
 ];
 
@@ -16,7 +25,12 @@ export const componentsRoutes: Route[] = [
     CommonModule,
     RouterModule.forChild(componentsRoutes),
     MarkdownModule.forChild(),
+    AlertSimpleComponent,
   ],
-  declarations: [ComponentsComponent],
+  declarations: [
+    ComponentsComponent,
+    UiComponentsComponent,
+    AlertsComponent,
+  ],
 })
 export class ComponentsModule {}

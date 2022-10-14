@@ -20,7 +20,8 @@
     "paths": {
       "@ht/components": ["libs/components/src/index.ts"],
       "@ht/home": ["libs/home/src/index.ts"],
-      "@ht/shared": ["libs/shared/src/index.ts"]
+      "@ht/shared": ["libs/shared/src/index.ts"],
+      "@ht/shared-ui": ["libs/shared-ui/src/index.ts"]
     }
   },
   "exclude": [

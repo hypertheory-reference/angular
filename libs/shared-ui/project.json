@@ -1,0 +1,36 @@
+{
+  "name": "shared-ui",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared-ui/src",
+  "prefix": "ht-ui",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared-ui"],
+      "options": {
+        "jestConfig": "libs/shared-ui/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared-ui/**/*.ts",
+          "libs/shared-ui/**/*.html"
+        ]
+      }
+    },
+    "component-test": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "libs/shared-ui/cypress.config.ts",
+        "testingType": "component",
+        "skipServe": true,
+        "devServerTarget": "frontend:build"
+      }
+    }
+  },
+  "tags": []
+}
