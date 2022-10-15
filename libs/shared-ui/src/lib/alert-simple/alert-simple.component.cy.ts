@@ -1,4 +1,4 @@
-import { MountConfig, mount } from 'cypress/angular';
+import { MountConfig } from 'cypress/angular';
 import { AlertSimpleComponent } from './alert-simple.component';
 
 describe(AlertSimpleComponent.name, () => {
@@ -9,7 +9,7 @@ describe(AlertSimpleComponent.name, () => {
         imports: [],
         providers: [],
       };
-      mount(AlertSimpleComponent, config);
+      cy.mount(AlertSimpleComponent, config);
     });
     it('should have no message', () => {
       cy.get('[data-testid="ht-ui-simple-alert"]')
@@ -47,7 +47,7 @@ describe(AlertSimpleComponent.name, () => {
         },
       };
 
-      mount(AlertSimpleComponent, config);
+      cy.mount(AlertSimpleComponent, config);
     });
     it('allows a message to be configured', () => {
       cy.get('[data-testid="ht-ui-simple-alert"]')
@@ -68,7 +68,7 @@ describe(AlertSimpleComponent.name, () => {
           },
         };
 
-        mount(AlertSimpleComponent, config);
+        cy.mount(AlertSimpleComponent, config);
       });
       it('Info Icon Displayed', () => {
         cy.get('[data-testid="ht-ui-simple-alert"]')
@@ -94,7 +94,7 @@ describe(AlertSimpleComponent.name, () => {
           },
         };
 
-        mount(AlertSimpleComponent, config);
+        cy.mount(AlertSimpleComponent, config);
       });
       it('Success Icon Displayed', () => {
         cy.get('[data-testid="ht-ui-simple-alert"]')
@@ -120,7 +120,7 @@ describe(AlertSimpleComponent.name, () => {
           },
         };
 
-        mount(AlertSimpleComponent, config);
+        cy.mount(AlertSimpleComponent, config);
       });
       it('Success Icon Displayed', () => {
         cy.get('[data-testid="ht-ui-simple-alert"]')
@@ -146,7 +146,7 @@ describe(AlertSimpleComponent.name, () => {
           },
         };
 
-        mount(AlertSimpleComponent, config);
+        cy.mount(AlertSimpleComponent, config);
       });
       it('Warning Icon Displayed', () => {
         cy.get('[data-testid="ht-ui-simple-alert"]')
